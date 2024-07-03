@@ -2,11 +2,21 @@ import random
 
 
 def split(numbers):
-    """
-    ########################################
-    Code Your Program here
-    ########################################
-    """
+    spl, *others = numbers
+    lesseql = []
+    greater = []
+    for x in range(len(others)):
+        if others[x] <= spl:
+            lesseql.append(others[x])
+        else:
+            greater.append(others[x])
+    numbers = []
+    for x in range(len(lesseql)):
+        numbers.append(lesseql[x])
+    numbers.append(spl)
+    for x in range(len(greater)):
+        numbers.append(greater[x])
+        
 
     #################
     # Do not delete return statement
